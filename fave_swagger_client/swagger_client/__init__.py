@@ -29,6 +29,7 @@ from swagger_client.models.error_response import ErrorResponse
 from swagger_client.models.error_response_error import ErrorResponseError
 from swagger_client.models.index import Index
 from swagger_client.models.model_property import ModelProperty
+from swagger_client.models.nearest_documents_by_vector_request import NearestDocumentsByVectorRequest
 from swagger_client.models.nearest_documents_request import NearestDocumentsRequest
 from swagger_client.models.nearest_documents_response import NearestDocumentsResponse
 from swagger_client.models.ok_response import OKResponse

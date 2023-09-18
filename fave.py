@@ -58,3 +58,18 @@ class FaVe():
         except ApiException as e:
             raise Exception("%s\n" % e)
         return resp.documents
+    
+    def get_nearest_documents_by_vector(
+        self, collection: str, vector: list[float],limit: int, distance: float
+    ) -> List[Document]:
+        rqst = swagger_client.NearestDocumentsByVectorRequest()
+        rqst.name = collection
+        rqst.vector = vector
+        rqst.limit = limit
+        rqst.distance = distance
+
+        try:
+            resp = self._client.fave_get_nearest_documents_by_vector(rqst)
+        except ApiException as e:
+            raise Exception("%s\n" % e)
+        return resp.documents

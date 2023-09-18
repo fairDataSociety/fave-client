@@ -7,8 +7,10 @@ Method | HTTP request | Description
 [**fave_add_documents**](DefaultApi.md#fave_add_documents) | **POST** /documents | 
 [**fave_create_collection**](DefaultApi.md#fave_create_collection) | **POST** /collections | 
 [**fave_delete_collection**](DefaultApi.md#fave_delete_collection) | **DELETE** /collections/{collection} | 
+[**fave_get_collections**](DefaultApi.md#fave_get_collections) | **GET** /collections | 
 [**fave_get_documents**](DefaultApi.md#fave_get_documents) | **GET** /documents | 
 [**fave_get_nearest_documents**](DefaultApi.md#fave_get_nearest_documents) | **POST** /nearest-documents | 
+[**fave_get_nearest_documents_by_vector**](DefaultApi.md#fave_get_nearest_documents_by_vector) | **POST** /nearest-documents-by-vector | 
 [**fave_root**](DefaultApi.md#fave_root) | **GET** / | 
 
 
@@ -153,6 +155,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **fave_get_collections**
+> list[Collection] fave_get_collections()
+
+
+
+Get all collections.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.DefaultApi()
+
+try:
+    api_response = api_instance.fave_get_collections()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->fave_get_collections: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[Collection]**](Collection.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/yaml, application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **fave_get_documents**
 > Document fave_get_documents(_property, value, collection)
 
@@ -235,6 +280,53 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**NearestDocumentsRequest**](NearestDocumentsRequest.md)|  | 
+
+### Return type
+
+[**NearestDocumentsResponse**](NearestDocumentsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/yaml, application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **fave_get_nearest_documents_by_vector**
+> NearestDocumentsResponse fave_get_nearest_documents_by_vector(body)
+
+
+
+Get nearest documents for a collection.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.DefaultApi()
+body = swagger_client.NearestDocumentsByVectorRequest() # NearestDocumentsByVectorRequest | 
+
+try:
+    api_response = api_instance.fave_get_nearest_documents_by_vector(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->fave_get_nearest_documents_by_vector: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NearestDocumentsByVectorRequest**](NearestDocumentsByVectorRequest.md)|  | 
 
 ### Return type
 

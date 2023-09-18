@@ -47,6 +47,12 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
+    def test_fave_get_collections(self):
+        """Test case for fave_get_collections
+
+        """
+        pass
+
     def test_fave_get_documents(self):
         """Test case for fave_get_documents
 
@@ -55,6 +61,12 @@ class TestDefaultApi(unittest.TestCase):
 
     def test_fave_get_nearest_documents(self):
         """Test case for fave_get_nearest_documents
+
+        """
+        pass
+
+    def test_fave_get_nearest_documents_by_vector(self):
+        """Test case for fave_get_nearest_documents_by_vector
 
         """
         pass

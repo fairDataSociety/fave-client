@@ -73,8 +73,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**fave_add_documents**](docs/DefaultApi.md#fave_add_documents) | **POST** /documents | 
 *DefaultApi* | [**fave_create_collection**](docs/DefaultApi.md#fave_create_collection) | **POST** /collections | 
 *DefaultApi* | [**fave_delete_collection**](docs/DefaultApi.md#fave_delete_collection) | **DELETE** /collections/{collection} | 
+*DefaultApi* | [**fave_get_collections**](docs/DefaultApi.md#fave_get_collections) | **GET** /collections | 
 *DefaultApi* | [**fave_get_documents**](docs/DefaultApi.md#fave_get_documents) | **GET** /documents | 
 *DefaultApi* | [**fave_get_nearest_documents**](docs/DefaultApi.md#fave_get_nearest_documents) | **POST** /nearest-documents | 
+*DefaultApi* | [**fave_get_nearest_documents_by_vector**](docs/DefaultApi.md#fave_get_nearest_documents_by_vector) | **POST** /nearest-documents-by-vector | 
 *DefaultApi* | [**fave_root**](docs/DefaultApi.md#fave_root) | **GET** / | 
 
 
@@ -87,6 +89,7 @@ Class | Method | HTTP request | Description
  - [ErrorResponseError](docs/ErrorResponseError.md)
  - [Index](docs/Index.md)
  - [ModelProperty](docs/ModelProperty.md)
+ - [NearestDocumentsByVectorRequest](docs/NearestDocumentsByVectorRequest.md)
  - [NearestDocumentsRequest](docs/NearestDocumentsRequest.md)
  - [NearestDocumentsResponse](docs/NearestDocumentsResponse.md)
  - [OKResponse](docs/OKResponse.md)
